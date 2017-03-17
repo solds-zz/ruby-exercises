@@ -1,9 +1,10 @@
-def valid_numbers?(num1, num2)
-  (num1 != 0) && (num2 != 0)
+def valid_numbers?(*nums)
+  valid_nums = nums.select { |n| n == 0 }
+  valid_nums.empty?
 end
 
 def opposites?(num1, num2)
-  opposites = (num1 > 0 && num2 < 0) || (num1 < 0 && num2 > 0)
+  (num1 > 0 && num2 < 0) || (num1 < 0 && num2 > 0)
 end
 
 loop do
